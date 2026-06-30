@@ -132,3 +132,17 @@ While implementing Terraform, I learned that Infrastructure as Code also include
 Provisioning infrastructure is only one part of the complete Terraform lifecycle.
 
 ---
+
+## 📚 Key Learnings
+
+Through this project, I gained practical experience in:
+
+- Implementing Infrastructure as Code (IaC) using Terraform.
+- Configuring AWS authentication for infrastructure provisioning.
+- Provisioning and managing AWS EC2 instances through code.
+- Understanding the complete Terraform workflow from initialization to infrastructure destruction.
+- Working with Terraform variables and outputs to create reusable configurations.
+- Understanding the importance of Terraform state management.
+- Learning why infrastructure should always be version-controlled and reproducible.
+
+---
