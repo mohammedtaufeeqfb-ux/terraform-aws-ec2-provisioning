@@ -2,151 +2,156 @@
 
 ## Project Overview
 
-This project demonstrates how I provisioned and managed AWS infrastructure using Terraform by implementing Infrastructure as Code (IaC). The project covers the complete infrastructure lifecycle—from configuring Terraform and AWS authentication to provisioning an EC2 instance, verifying the infrastructure state, and cleaning up resources.
+Provisioned and managed an AWS EC2 instance using Terraform by implementing Infrastructure as Code (IaC). This project covers the complete infrastructure lifecycle, including AWS authentication, infrastructure planning, EC2 provisioning, infrastructure verification, and resource cleanup.
 
 ---
 
 ## Project Goal
 
-The objective of this project was to understand and implement Infrastructure as Code (IaC) by provisioning an AWS EC2 instance using Terraform instead of creating resources manually through the AWS Management Console.
+Provision and manage AWS infrastructure using Terraform instead of manually creating resources through the AWS Management Console while understanding the complete Infrastructure as Code workflow.
 
 ---
 
 ## Implementation Journey
 
-### Step 1 - Set Up the Terraform Workstation
+### Step 1 - Terraform Workstation Setup
 
-- Launched an Ubuntu EC2 instance to use as the Terraform workstation.
+- Launched an Ubuntu EC2 instance as the Terraform workstation.
 - Connected to the instance using SSH.
 - Installed Terraform and verified the installation.
 
-📷 *Screenshot: Terraform installation and version verification*
+![Terraform Workstation](screenshots/01-terraform-workstation.png)
+![Terraform Installation](screenshots/02-terraform-installation.png)
 
 ---
 
-### Step 2 - Configure AWS Authentication
+### Step 2 - AWS Authentication
 
-- Created an IAM user with the required permissions.
 - Configured AWS CLI credentials using `aws configure`.
 - Verified successful authentication before provisioning infrastructure.
 
-📷 *Screenshot: AWS CLI configuration*
+![AWS Authentication](screenshots/02-aws-authentication.png)
 
 ---
 
-### Step 3 - Initialize the Terraform Project
+### Step 3 - Terraform Initialization
 
 - Created the Terraform configuration files.
-- Initialized the working directory using `terraform init`.
+- Initialized the project using `terraform init`.
 - Downloaded the required AWS provider plugins.
 
-📷 *Screenshot: terraform init*
+![Terraform Initialization](screenshots/03-terraform-init.png)
 
 ---
 
-### Step 4 - Validate and Plan the Infrastructure
+### Step 4 - Infrastructure Planning
 
 - Validated the Terraform configuration.
 - Reviewed the execution plan using `terraform plan`.
 - Verified the resources before provisioning.
 
-📷 *Screenshot: terraform plan*
+![Terraform Plan](screenshots/04-terraform-init.png)
 
 ---
 
-### Step 5 - Provision the EC2 Instance
+### Step 5 - Infrastructure Provisioning
 
 - Applied the Terraform configuration using `terraform apply`.
 - Successfully provisioned an AWS EC2 instance.
-- Verified the instance from the AWS Management Console.
 
-📷 *Screenshot: EC2 instance running*
-
----
-
-### Step 6 - Verify the Terraform State
-
-- Inspected the Terraform state after provisioning.
-- Verified the managed resources using Terraform state commands.
-- Confirmed that the infrastructure matched the Terraform configuration.
-
-📷 *Screenshot: terraform state*
+![Terraform Apply](screenshots/05-terraform-plan.png)
 
 ---
 
-### Step 7 - Destroy the Infrastructure
+### Step 6 - Infrastructure Verification
 
-- Destroyed all created AWS resources using `terraform destroy`.
+- Verified the EC2 instance from the AWS Management Console.
+- Confirmed that the infrastructure was provisioned successfully.
+
+![EC2 Created](screenshots/06-terraform-apply.png)
+
+---
+
+### Step 7 - Infrastructure Cleanup
+
+- Destroyed all AWS resources using `terraform destroy`.
 - Verified that the infrastructure was cleaned up successfully.
 
-📷 *Screenshot: terraform destroy*
+![Terraform Destroy](screenshots/08-terraform-destroy.png)
 
 ---
 
 ## Challenges Faced
 
-### 1. Accidental Loss of Terraform Workstation
+### Challenge 1 - Loss of Terraform Workstation
 
-**Challenge**
+**Issue**
 
-During the learning process, I accidentally terminated the EC2 instance that was being used as my Terraform workstation, resulting in the loss of the local Terraform configuration files.
+The EC2 instance used as the Terraform workstation was accidentally terminated, resulting in the loss of local Terraform configuration files.
 
 **Resolution**
 
-I recreated the project structure using my implementation notes and documentation. This reinforced the importance of storing Infrastructure as Code in version control systems such as GitHub instead of relying on a single workstation.
+Recreated the project using my implementation notes and documentation. Moved the project to GitHub to maintain version control.
 
-**Key Takeaway**
+**Learning**
 
-Infrastructure should always be reproducible from source code.
+Infrastructure should always be version-controlled and reproducible.
 
 ---
 
-### 2. AWS Authentication Verification
+### Challenge 2 - AWS Authentication
 
-**Challenge**
+**Issue**
 
-Before provisioning resources, I needed to ensure Terraform could authenticate successfully with AWS.
+Terraform requires valid AWS credentials before provisioning resources.
 
 **Resolution**
 
-Configured AWS CLI credentials using `aws configure` and verified the authentication before running Terraform commands.
+Configured AWS CLI credentials using `aws configure` and verified authentication before executing Terraform commands.
 
-**Key Takeaway**
+**Learning**
 
-Always verify authentication before provisioning infrastructure.
+Always verify cloud authentication before provisioning infrastructure.
 
 ---
 
-### 3. Understanding the Infrastructure Lifecycle
+### Challenge 3 - Understanding the Terraform Workflow
 
-**Challenge**
+**Issue**
 
-Initially, my focus was only on creating AWS resources.
+Initially focused only on provisioning resources.
 
 **Resolution**
 
-While implementing Terraform, I learned that Infrastructure as Code also includes planning, state verification, resource inspection, and infrastructure cleanup using `terraform destroy`.
+Implemented the complete workflow, including initialization, planning, provisioning, verification, and infrastructure cleanup.
 
-**Key Takeaway**
+**Learning**
 
-Provisioning infrastructure is only one part of the complete Terraform lifecycle.
+Infrastructure provisioning is only one part of the complete Terraform lifecycle.
 
 ---
 
 ## Key Learnings
 
-Through this project, I gained practical experience in:
-
-- Implementing Infrastructure as Code (IaC) using Terraform.
-- Configuring AWS authentication for infrastructure provisioning.
-- Provisioning and managing AWS EC2 instances through code.
-- Understanding the complete Terraform workflow from initialization to infrastructure destruction.
-- Working with Terraform variables and outputs to create reusable configurations.
-- Understanding the importance of Terraform state management.
-- Learning why infrastructure should always be version-controlled and reproducible.
+- Implemented Infrastructure as Code using Terraform.
+- Provisioned AWS EC2 instances through declarative configuration.
+- Understood the complete Terraform workflow from initialization to destruction.
+- Worked with Terraform variables and outputs.
+- Learned the importance of Terraform state management.
+- Understood why Infrastructure as Code should always be version-controlled.
 
 ---
 
 ## Project Outcome
 
-Successfully provisioned an AWS EC2 instance using Terraform and managed its complete lifecycle through Infrastructure as Code (IaC). The project strengthened my understanding of AWS infrastructure automation, Terraform workflows, state management, and reproducible deployments while reinforcing the importance of version control and infrastructure lifecycle management.
+Successfully provisioned and managed AWS EC2 infrastructure using Terraform while implementing the complete Infrastructure as Code workflow. This project improved my understanding of AWS infrastructure automation, Terraform lifecycle management, and reproducible deployments.
+
+---
+
+## Source Code
+
+The Terraform configuration files used in this project are available in the `source-code` directory.
+
+- main.tf
+- variables.tf
+- outputs.tf
