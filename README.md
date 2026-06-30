@@ -30,7 +30,7 @@ Provision and manage AWS infrastructure using Terraform instead of manually crea
 - Configured AWS CLI credentials using `aws configure`.
 - Verified successful authentication before provisioning infrastructure.
 
-![AWS Authentication](screenshots/02-aws-authentication.png)
+![AWS Authentication](screenshots/03-aws-authentication.png)
 
 ---
 
@@ -40,7 +40,7 @@ Provision and manage AWS infrastructure using Terraform instead of manually crea
 - Initialized the project using `terraform init`.
 - Downloaded the required AWS provider plugins.
 
-![Terraform Initialization](screenshots/03-terraform-init.png)
+![Terraform Initialization](screenshots/04-terraform-init.png)
 
 ---
 
@@ -50,7 +50,7 @@ Provision and manage AWS infrastructure using Terraform instead of manually crea
 - Reviewed the execution plan using `terraform plan`.
 - Verified the resources before provisioning.
 
-![Terraform Plan](screenshots/04-terraform-init.png)
+![Terraform Plan](screenshots/05-terraform-plan.png)
 
 ---
 
@@ -59,7 +59,7 @@ Provision and manage AWS infrastructure using Terraform instead of manually crea
 - Applied the Terraform configuration using `terraform apply`.
 - Successfully provisioned an AWS EC2 instance.
 
-![Terraform Apply](screenshots/05-terraform-plan.png)
+![Terraform Apply](screenshots/06-terraform-apply.png)
 
 ---
 
@@ -68,7 +68,7 @@ Provision and manage AWS infrastructure using Terraform instead of manually crea
 - Verified the EC2 instance from the AWS Management Console.
 - Confirmed that the infrastructure was provisioned successfully.
 
-![EC2 Created](screenshots/06-terraform-apply.png)
+![EC2 Created](screenshots/07-ec2-created.png)
 
 ---
 
