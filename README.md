@@ -1,18 +1,18 @@
 # Terraform AWS EC2 Provisioning
 
-## 📖 Project Overview
+## Project Overview
 
 This project demonstrates how I provisioned and managed AWS infrastructure using Terraform by implementing Infrastructure as Code (IaC). The project covers the complete infrastructure lifecycle—from configuring Terraform and AWS authentication to provisioning an EC2 instance, verifying the infrastructure state, and cleaning up resources.
 
 ---
 
-## 🎯 Project Goal
+## Project Goal
 
 The objective of this project was to understand and implement Infrastructure as Code (IaC) by provisioning an AWS EC2 instance using Terraform instead of creating resources manually through the AWS Management Console.
 
 ---
 
-## 🚀 Implementation Journey
+## Implementation Journey
 
 ### Step 1 - Set Up the Terraform Workstation
 
@@ -83,7 +83,7 @@ The objective of this project was to understand and implement Infrastructure as 
 
 ---
 
-## ⚠️ Challenges Faced
+## Challenges Faced
 
 ### 1. Accidental Loss of Terraform Workstation
 
@@ -133,7 +133,7 @@ Provisioning infrastructure is only one part of the complete Terraform lifecycle
 
 ---
 
-## 📚 Key Learnings
+## Key Learnings
 
 Through this project, I gained practical experience in:
 
@@ -146,3 +146,7 @@ Through this project, I gained practical experience in:
 - Learning why infrastructure should always be version-controlled and reproducible.
 
 ---
+
+## Project Outcome
+
+Successfully provisioned an AWS EC2 instance using Terraform and managed its complete lifecycle through Infrastructure as Code (IaC). The project strengthened my understanding of AWS infrastructure automation, Terraform workflows, state management, and reproducible deployments while reinforcing the importance of version control and infrastructure lifecycle management.
