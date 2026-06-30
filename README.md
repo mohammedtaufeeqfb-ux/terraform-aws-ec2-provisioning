@@ -82,3 +82,53 @@ The objective of this project was to understand and implement Infrastructure as 
 📷 *Screenshot: terraform destroy*
 
 ---
+
+## ⚠️ Challenges Faced
+
+### 1. Accidental Loss of Terraform Workstation
+
+**Challenge**
+
+During the learning process, I accidentally terminated the EC2 instance that was being used as my Terraform workstation, resulting in the loss of the local Terraform configuration files.
+
+**Resolution**
+
+I recreated the project structure using my implementation notes and documentation. This reinforced the importance of storing Infrastructure as Code in version control systems such as GitHub instead of relying on a single workstation.
+
+**Key Takeaway**
+
+Infrastructure should always be reproducible from source code.
+
+---
+
+### 2. AWS Authentication Verification
+
+**Challenge**
+
+Before provisioning resources, I needed to ensure Terraform could authenticate successfully with AWS.
+
+**Resolution**
+
+Configured AWS CLI credentials using `aws configure` and verified the authentication before running Terraform commands.
+
+**Key Takeaway**
+
+Always verify authentication before provisioning infrastructure.
+
+---
+
+### 3. Understanding the Infrastructure Lifecycle
+
+**Challenge**
+
+Initially, my focus was only on creating AWS resources.
+
+**Resolution**
+
+While implementing Terraform, I learned that Infrastructure as Code also includes planning, state verification, resource inspection, and infrastructure cleanup using `terraform destroy`.
+
+**Key Takeaway**
+
+Provisioning infrastructure is only one part of the complete Terraform lifecycle.
+
+---
